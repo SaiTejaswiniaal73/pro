@@ -45,14 +45,52 @@ body {
   z-index: 20;
 }
 /*---------------------home----------------*/
-.img1 {
+ /* .slideimages {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(20%);
   opacity: 0.9;
+}  */
+@keyframes slide {
+  10%
+  {
+    background-image:url(slide-img1.jpg);
+    transform: scale(1);
+    opacity: 0.9; 
+    
+  }
+  50%
+  {
+    background-image:url(slide-img2.jpg);
+    opacity: 0.9;
+    transform: scale(1.2);
+  } 
+  100%
+  {
+    background-image:url(slide-img3.jpg);
+    opacity: 0.9;
+    transform: scale(1);
+  
+  }
+
 }
 #home {
+
+  width: 100%;
+  height: 60%;
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction:normal;
+  background-image:url(slide-img1.jpg);
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  opacity: 0.9;
+  object-fit: cover;
+  /* filter: brightness(90%); */
+  opacity: 0.9;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -61,14 +99,23 @@ body {
   align-items: center;
   text-align: center;
   width: 100vw;
-  height: 60vh;
-  color: rgb(255, 255, 255);
+  height: 80vh;
+  color: rgb(255, 255, 255); 
+  
 }
+#home
+{
+  background-image: url(slide-img1.jpg);
+}
+
+
+
 .ptext {
   position: absolute;
   text-align: center;
   width: 80%;
   text-align-last: center;
+  z-index: 10;
 }
 
 .p2 {
@@ -86,7 +133,7 @@ body {
 .p4 {
   font-size: 40%;
   margin: 1vw 0;
-  color: rgba(255, 255, 255, 0.699);
+  color: rgba(255, 255, 255, 0.954);
 }
 .learn {
   font-size: 80%;
@@ -98,12 +145,12 @@ body {
   display: inline-block;
   margin: 1vw 0;
 }
-#about
-{
+#about {
   background-color: rgba(236, 232, 232, 0.42);
   display: flex;
   flex-wrap: wrap;
 }
+
 .about1 {
   display: flex;
   flex-wrap: wrap;
@@ -116,11 +163,10 @@ body {
   height: auto;
   min-height: 70vh;
   /* min-height: 70vh; */
-  width: 100vw; 
+  width: 100vw;
   overflow: hidden;
 }
-.box1
-{
+.box1 {
   margin-top: 13vw;
   position: relative;
   z-index: 10;
@@ -140,21 +186,19 @@ body {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  font-size: 3.0vw;
+  font-size: 3vw;
   letter-spacing: 0.5vw;
   line-height: 1.5;
   margin-bottom: 3vw;
   margin-top: 4vw;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.p6 
-{
+.p6 {
   position: relative;
   flex: 2;
   font-size: 1.5vw;
   line-height: 1.5;
-  text-align: justify; 
+  text-align: justify;
   text-align-last: left;
   text-align: justify;
   overflow-wrap: break-word;
@@ -164,42 +208,34 @@ body {
   line-height: 1.5;
   margin-top: 1vw;
   margin-bottom: 3vw;
-  width: 90%; 
+  width: 90%;
   font-family: Arial, Helvetica, sans-serif;
   flex: 0;
-  
 }
-.circle
-{
-  
+.circle {
   position: absolute;
-  background-color:white;
+  background-color: white;
   border: 2px gray solid;
   border-radius: 50%;
-  height:24vw;
-  width:24vw;
+  height: 24vw;
+  width: 24vw;
   margin-top: -22vw;
   margin-left: 61vw;
   z-index: 6;
-
-
 }
-.img2 img
-{
+.img2 img {
   flex: 1;
-  height:20vw;
-  width:20vw;
+  height: 20vw;
+  width: 20vw;
   border-radius: 50%;
 }
-.img2
-{
-  position:absolute;
+.img2 {
+  position: absolute;
   margin-top: -20vw;
   margin-left: 63vw;
-  z-index: 6; 
+  z-index: 6;
 }
-.about2
-{
+.about2 {
   display: flex;
   display: flex;
   flex-wrap: wrap;
@@ -210,28 +246,26 @@ body {
   justify-items: center;
   align-items: center;
   align-content: center;
-   height: auto;
+  height: auto;
   min-height: 70vh;
-  min-height: 70vh; 
-  width: 100vw; 
-  overflow: hidden; 
+  min-height: 70vh;
+  width: 100vw;
+  overflow: hidden;
 }
 .p7 {
-  color:black;
+  color: black;
   position: relative;
   align-content: center;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  font-size: 3.0vw;
+  font-size: 3vw;
   letter-spacing: 0.6vw;
   margin-bottom: 3vw;
   margin-top: 9vw;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.p8
-{
+.p8 {
   color: gray;
   position: relative;
   display: flex;
@@ -243,24 +277,24 @@ body {
   letter-spacing: 0.2vw;
   margin-bottom: 9vw;
   margin-top: 4vw;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   position: relative;
 }
 .team {
   display: flex;
   justify-content: space-around;
-  gap: 30px; 
+  gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 5vw;
 }
 
 .member {
   text-align: center;
-  background-color:white; 
+  background-color: white;
   border-radius: 10px;
   padding: 3vw;
   box-shadow: 0 2px 8px rgba(245, 242, 242, 0.1);
-  width: 27vw;
+  width: 25vw;
   height: 40vw;
   justify-content: center; /* Center the content vertically */
   align-items: center;
@@ -270,116 +304,101 @@ body {
 
 .team {
   display: flex;
-  justify-content: center; 
-  gap: 30px; 
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 5vw;
-  justify-content: space-around; 
+  justify-content: space-around;
 }
 
 .member img {
   border-radius: 50%;
   width: 18vw;
   height: 18vw;
-  object-fit: cover; 
-  margin-bottom: 2vw; 
+  object-fit: cover;
+  margin-bottom: 2vw;
 }
 
 .member p {
   font-size: 2vw;
   color: rgb(236, 5, 5);
   text-align: center;
-  margin: 0; 
+  margin: 0;
 }
-.gal
-{
+#gallery {
+  background-color: white;
+}
+.gal {
   display: flex;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  position: relative; 
+  position: relative;
   align-items: center;
   align-content: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
-.p9
-{
+.p9 {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   text-align: center;
   justify-content: space-between;
+  justify-content: space-around;
   text-align-last: center;
   font-size: 2.5vw;
+  padding: 3vw;
   letter-spacing: 0.2vw;
   margin-bottom: 5vw;
   margin-top: 3vw;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   position: relative;
   color: gray;
 }
 /* Gallery layout using grid */
-.glry {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-template-rows: repeat(2, auto);   /* 2 rows */
-  gap: 1vw;  /* Space between team members */
-  margin-top: 5vw;
-  justify-items: center;
- 
-}
-
-/* Styling for each person */
-.img {
-  text-align: center;
+.gallery {
+  width: 80%; /* Adjust the width of the gallery */
+  margin: 0 auto; /* Center the gallery horizontally */
   background-color: white;
-  border-radius: 1vw;
-  padding: 2vw;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 28vw;  /* Adjust width as needed */
-  height: 35vw; /* Adjust height as needed */
-  position: relative;
 }
-
-/* Styling for the images */
-.img img {
-  border-radius: 50%;
-  width: 12vw; /* Adjust based on the size you want */
-  height: 12vw; /* Adjust based on the size you want */
+.glry 
+{
+  
+  width: 70%;
+  height: auto;
+  display: grid;
+  grid-template-areas:
+    "a1 a2 "
+    "a3 a4 ";
+  
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 2vw;
+  align-items: center; 
+}
+img {
   object-fit: cover;
-  margin-bottom: 1vw;  /* Space between image and name */
+  height: 100%;
+  width: 100%;
+}
+.img11 {
+  grid-area: a1;
+}
+.img22 {
+  grid-area: a2;
+}
+.img33 {
+  grid-area: a3;
+}
+.img44 {
+  grid-area: a4;
 }
 
-/* Styling for the name (p) */
-.img p {
-  font-size: 2vw;
-  color: rgb(236, 5, 5);
-  margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-* Media Query for Mobile Screens */
-@media (max-width: 515px){
-  .ul1 
+ @media(max-width: 515px)
   {
+  .ul1 {
     gap: 10px;
   }
   .p1 {
@@ -407,18 +426,14 @@ body {
     font-size: 2.3vw;
   }
 
-  .learn
-   {
+  .learn {
     font-size: 2.3vw;
     padding: 1%;
   }
-  .p5
-  {
-    
+  .p5 {
     font-size: 2vw;
   }
-  .p6
-  {
+  .p6 {
     font-size: 1vw;
   }
 }
@@ -457,16 +472,12 @@ body {
     font-size: 2.3vw;
     padding: 1%;
   }
-  .p5
-  {
-    
+  .p5 {
     font-size: 2.1vw;
   }
-  .p6
-  {
+  .p6 {
     font-size: 1.8vw;
   }
-  
 }
 
 /* Media Query for Laptop Screens */
@@ -503,14 +514,23 @@ body {
     font-size: 1.7vw;
     padding: 1%;
   }
-  .p5
-  {
-    
+  .p5 {
     font-size: 1vw;
   }
-  .p6
-  {
+  .p6 {
     font-size: 1.5vw;
   }
-   
-  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
